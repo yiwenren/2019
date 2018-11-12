@@ -35,5 +35,7 @@ int getAPowB(int a, int b) {
   }
 }
 ```
+# Binary search
+## If using binary search, the array must be sorted, so that we can reduce the search space by disgarding 1/2 of the searching range.
 
 
