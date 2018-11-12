@@ -1,0 +1,5 @@
+1. Recursion:
+
+* Fibonacci
+** Time = O(2^n) There are n levels in the recursions tree. At most there are 2^n nodes in the tree. So the time complexity is 2^n
+** Space = O(n) Since there're n levels and each level it contains 1 local variable.
