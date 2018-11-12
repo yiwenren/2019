@@ -1,11 +1,12 @@
-1. Recursion:
+# Recursion:
 
-1.1 Fibonacci
-recursion:
-** Time = O(2^n) There are n levels in the recursions tree. At most there are 2^n nodes in the tree. So the time complexity is 2^n
-** Space = O(n) Since there're n levels and each level it contains 1 local variable.
+## Fibonacci
+* recursion:
+ Time = O(2^n) There are n levels in the recursions tree. At most there are 2^n nodes in the tree. So the time complexity is 2^n
+ Space = O(n) Since there're n levels and each level it contains 1 local variable.
 
-Non-recursion:
+* Non-recursion:
+```java
 public int fibonacci(int n) {
     int a = 0, b = 1;
      for (int i = 0; i < n - 1; i++) {
@@ -16,9 +17,11 @@ public int fibonacci(int n) {
 
     return a;
 }
+```
 
-1.2 a^b
-recursion:
+## a^b
+* recursion:
+```java
 int getAPowB(int a, int b) {
   if (b == 0) {
     return 1;
@@ -31,5 +34,6 @@ int getAPowB(int a, int b) {
     return halfResult * halfResult * a;
   }
 }
+```
 
 
