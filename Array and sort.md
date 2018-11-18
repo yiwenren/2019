@@ -34,36 +34,34 @@ public void sortIntegers(int[] A) {
 
 Selection sort by two stacks:
 ```java
-    public void sortIntegers(int[] A) {
-        // write your code here
-        // selection sort with two Stacks
-        
-        if (A == null || A.length == 0) {
-            return;
+public void sortIntegers(int[] A) {
+    // write your code here
+    // selection sort with two Stacks
+    
+    if (A == null || A.length == 0) {
+        return;
+    }
+    
+    Stack<Integer> stack1 = new Stack<Integer>();
+    Stack<Integer> stack2 = new Stack<Integer>();
+    
+    for (int num : A) {
+        stack1.push(num);
+    }
+    
+    while(!stack1.isEmpty()) {
+        int tempPeek = stack1.pop();
+        // if tempPeek < stack2, push these number back to stack1
+        while (!stack2.isEmpty() && tempPeek < stack2.peek()) {
+            stack1.push(stack2.pop());
         }
         
-        Stack<Integer> stack1 = new Stack();
-        Stack<Integer> stack2 = new Stack();
-        
-        for (int i = 0; i < A.length; i++) {
-            stack1.push(A[i]);
-        }
-        
-        while(!stack1.isEmpty()) {
-            int tempPeek = stack1.pop();
-            
-            // the number in stack2 should from the large to small, so if the temppeek is larget than stack2 peek, we should push all smaller number back to stack1 temporarily
-            while (!stack2.isEmpty() && tempPeek > stack2.peek()) {
-                stack1.push(stack2.pop());
-            }
-            
-            stack2.push(tempPeek);
-        }
-        
-        int i = 0;
-        while(!stack2.isEmpty()) {
-            A[i ++] = stack2.pop();
-        }
+        stack2.push(tempPeek);
         
     }
+    
+   for (int i = A.length - 1; i >= 0; i--) {
+       A[i] = stack2.pop();
+   }
+}
 ```
