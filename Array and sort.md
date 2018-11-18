@@ -13,7 +13,7 @@ for (int i = 0; i < n - 1; i++) {
 }
 ```
 
-https://github.com/anim2019/2019
+https://www.lintcode.com/problem/sort-integers/description
 ```java
 public void sortIntegers(int[] A) {
      // selection sort
