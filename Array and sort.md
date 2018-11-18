@@ -65,3 +65,72 @@ public void sortIntegers(int[] A) {
    }
 }
 ```
+
+# Merge sort
+time complexity: O(nlog(n)) -> it will have log(n) levels, and in each level it will do comparison(O(1)) operation in n times. The total time complexity is n*log(n)
+
+先局部有序再整体有序
+
+https://www.lintcode.com/problem/sort-integers-ii/description
+```java
+public class Solution {
+    /**
+     * @param A: an integer array
+     * @return: nothing
+     */
+    public void sortIntegers2(int[] A) {
+        // write your code here
+        // merge sort
+        if (A == null || A.length == 0) {
+            return;
+        }
+        
+        int[] temp = new int[A.length];
+        mergeSort(A, temp, 0, A.length - 1);
+        
+    }
+    
+    private void mergeSort(int[] A, int[] temp, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+        int mid = start + (end - start)/2;
+        mergeSort(A, temp, start, mid);
+        mergeSort(A, temp, mid + 1, end);
+        merge(A, temp, start, mid, end);
+    }
+    
+    private void merge(int[] A, int[] temp, int start, int mid, int end) {
+        int left = start, right = mid + 1;
+        int index = start;
+        // merge left and right part into temp
+        while (left <= mid && right <= end) {
+            if (A[left] < A[right]) {
+                temp[index++] = A[left++];
+            } else {
+                temp[index++] = A[right++];
+            }
+        }
+        
+        // when the last loop ends, either left > mid or right > end
+        // we need to merge the rest of left or right number into temp
+        // left section is [start, mid], right section is [mid + 1, end]
+        // so here it is left <= mid
+        while (left <= mid) {
+            temp[index++] = A[left++];
+        }
+        
+        while (right <= end) {
+            temp[index++] = A[right++];
+        }
+        
+        // move int from temp to A
+        index = start;
+        while (index <= end) {
+            A[index] = temp[index];
+            index++;
+        }
+        
+    }
+}
+```
