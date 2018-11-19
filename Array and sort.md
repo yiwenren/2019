@@ -138,5 +138,6 @@ public class Solution {
 同类型题：
 A1B2C3D4 -> ABCD1234 和merge sort是一样的，只是字符先后的规则稍微变一下。
 
+那么，如果从ABCD1234 -> A1B2C3D4? AB CD 12 34 ->(reverse 23) AB12 CD34 ->(reverse 23) AA1B2 C3D4
 
 
