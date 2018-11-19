@@ -134,3 +134,9 @@ public class Solution {
     }
 }
 ```
+
+同类型题：
+A1B2C3D4 -> ABCD1234 和merge sort是一样的，只是字符先后的规则稍微变一下。
+
+
+
