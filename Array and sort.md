@@ -144,6 +144,8 @@ A1B2C3D4 -> ABCD1234 和merge sort是一样的，只是字符先后的规则稍�
 先整体有序再局部有序
 Average time complexity: O(nlog(n))
 Worst time complexity: O(n*n) - 比方说Pivot选在了最后一位，如果原本数组就是有序的，那么分区的时候左边或右边就有一边是没有数的，就等于要做(n-1) + (n-2) + ... + 1次对比操作，O(n*n). best case是分区的时候把左右两边分成相等的，就是一共logn层，每一层做n次操作，一共nlogn
+
+相似题：挡板类型， Move 0s To The End I
 ```java
 public int[] quickSort(int[] array) {
     // Write your solution here
