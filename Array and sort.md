@@ -156,9 +156,14 @@ public int[] quickSort(int[] array) {
     if (start >= end) {
       return;
     }
+    
     int left = start, right = end;
     int mid = (left + right) / 2;
+    
+    // key point 2: every time you compare left & right, it should be 
+    // left <= right not left < right
     while(left <= right) {
+      // key point 1: pivot is the value, not the index
       while(left <= right && array[left] < array[mid]) {
         left++;
       }
