@@ -190,6 +190,7 @@ public int[] quickSort(int[] array) {
 
 # Rainbow sort
 array[0,i) 都是-1, array(i, j] 是0, array[j, k] 是未知, array(k, end]是1
+
 j往前移动，碰到-1就与i位置的数字交换，然后j与i都继续往前移动一位，保证[0, i)是-1; 如果碰到0则j继续往前移动，保证[i,j)都是0;如果碰到1则交换j与k位置上的数，之后j向左移动一位，使得1都被抛在了j的右边, 但是j不移动，因为换过来的数依旧是未知，j一直到下次找到了-1， 0再移动，使得[j, k]是未知。
 
 ```java
