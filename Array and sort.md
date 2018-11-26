@@ -140,4 +140,44 @@ A1B2C3D4 -> ABCD1234 和merge sort是一样的，只是字符先后的规则稍�
 
 那么，如果从ABCD1234 -> A1B2C3D4? AB CD 12 34 ->(reverse 23) AB12 CD34 ->(reverse 23) AA1B2 C3D4
 
+# Quick Sort
+```java
+public int[] quickSort(int[] array) {
+    // Write your solution here
+    if (array == null || array.length == 0) {
+      return array; 
+    }
+    
+    sort(array, 0, array.length - 1);
+    return array;
+  }
+  
+  private void sort(int[] array, int start, int end) {
+    if (start >= end) {
+      return;
+    }
+    int left = start, right = end;
+    int mid = (left + right) / 2;
+    while(left <= right) {
+      while(left <= right && array[left] < array[mid]) {
+        left++;
+      }
+      while(left <= right && array[right] > array[mid]) {
+        right--; 
+      }
+      if (left <= right) {
+        int temp = array[left];
+        array[left] = array[right];
+        array[right] = temp;
+        left++;
+        right--;
+      }
+    }
+    
+    sort(array, start, right);
+    sort(array, left, end); 
+  }
+
+```
+
 
