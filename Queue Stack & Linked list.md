@@ -70,6 +70,8 @@ class MyQueue {
 
 Using stack2 to maintain min. Only if stack2 is empty or stack2.peek() >= new element, stack2 add new elmement.
 
+https://leetcode.com/problems/min-stack
+
 ```java
 class MinStack {
     
