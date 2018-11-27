@@ -1,0 +1,10 @@
+# Queue
+Operation 
+- throw exception: add, remove, element
+- return null if empty: offer, poll, peek
+
+# Stack
+Operation
+- push, pop, top
+
+## Implement queue by two stacks
