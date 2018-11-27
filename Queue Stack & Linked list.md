@@ -68,7 +68,7 @@ class MyQueue {
 ```
 ## Implement min stack
 
-Using stack2 to maintain min. Only if stack2 is empty or stack2.peek() > new element, stack2 add new elmement.
+Using stack2 to maintain min. Only if stack2 is empty or stack2.peek() >= new element, stack2 add new elmement.
 
 ```java
 class MinStack {
