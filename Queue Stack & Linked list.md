@@ -8,6 +8,8 @@ Operation
 - push, pop, top
 
 ## Implement queue by two stacks
+把新的元素放在stack2中，当pop或者peek的时候，如果stack1为空，就把stack2倒在stack1中，如果stack1不为空，就返回stack1的pop/peek
+
 https://leetcode.com/problems/implement-queue-using-stacks
 ```java
 class MyQueue {
