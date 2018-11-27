@@ -66,3 +66,41 @@ class MyQueue {
  * boolean param_4 = obj.empty();
  */
 ```
+## Implement min stack
+
+Using stack2 to maintain min. Only if stack2 is empty or stack2.peek() > new element, stack2 add new elmement.
+
+```java
+class MinStack {
+    
+    Stack<Integer> stack1, stack2;
+
+    /** initialize your data structure here. */
+    public MinStack() {
+        stack1 = new Stack<Integer>();
+        stack2 = new Stack<Integer>();
+    }
+    
+    public void push(int x) {
+        stack1.push(x);
+        if (stack2.empty() || x <= stack2.peek()) {
+            stack2.push(x);
+        }
+    }
+    
+    public void pop() {
+        int x = stack1.pop();
+        if (!stack2.empty() && x <= stack2.peek()) {
+            stack2.pop();
+        }
+    }
+    
+    public int top() {
+        return stack1.peek();
+    }
+    
+    public int getMin() {
+        return stack2.peek();
+    }
+}
+```
