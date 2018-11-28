@@ -116,4 +116,26 @@ class MinStack {
 ## 从左往右scan string/array时，如果要不断需要往回看时，要考虑是否可以用stack
 
 
-
+# LinkedList
+## reverse linkedlist
+```java
+public class Solution {
+  public ListNode reverse(ListNode head) {
+    // write your solution here
+    if (head == null) {
+      return null; 
+    }
+    
+    ListNode prev = null, next = null;
+    ListNode curNode = head;
+    
+    while (curNode != null) {
+      next = curNode.next;
+      curNode.next = prev;
+      prev = curNode;
+      curNode = next;
+    }
+    return prev;
+  }
+}
+```
