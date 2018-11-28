@@ -36,7 +36,7 @@ int getAPowB(int a, int b) {
 }
 ```
 
-# Find K closest numbers in sorted array
+## Find K closest numbers in sorted array
 可以用二分法先找到距离target最近的一个数。然后做k个循环，从这个数左右开始找到k-1个距离相近的数，类似于merge的过程。
 
 
