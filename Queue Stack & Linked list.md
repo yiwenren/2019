@@ -117,7 +117,7 @@ class MinStack {
 
 
 # LinkedList
-## reverse linkedlist
+### reverse linkedlist
 ```java
 public class Solution {
   public ListNode reverse(ListNode head) {
@@ -139,3 +139,5 @@ public class Solution {
   }
 }
 ```
+## 快慢指针的应用
+### 寻找linkedlist中点
