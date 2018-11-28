@@ -113,5 +113,7 @@ class MinStack {
 （3）如果右边不是空，就直接stack2.pop();
 （4）左右两边进分别是stack1/stack2.push()
 
+## 从左往右scan string/array时，如果要不断需要往回看时，要考虑是否可以用stack
+
 
 
