@@ -106,3 +106,12 @@ class MinStack {
     }
 }
 ```
+## inplement deque by two stacks
+如果左边进右边出，那么：
+（1）左边push右边pop；
+（2）如果右边是空，就把左边stack倒到右边，这样pop是o(n)
+（3）如果右边不是空，就直接stack2.pop();
+（4）左右两边进分别是stack1/stack2.push()
+
+
+
