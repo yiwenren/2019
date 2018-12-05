@@ -142,5 +142,21 @@ public class Solution {
 ## 快慢指针的应用
 ### 寻找linkedlist中点
 https://leetcode.com/problems/middle-of-the-linked-list
-###Linked List Cycle
+
+### Linked List Cycle
 https://leetcode.com/problems/linked-list-cycle/
+```jave
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next  != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+```
