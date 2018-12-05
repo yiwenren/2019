@@ -141,3 +141,6 @@ public class Solution {
 ```
 ## 快慢指针的应用
 ### 寻找linkedlist中点
+https://leetcode.com/problems/middle-of-the-linked-list
+###Linked List Cycle
+https://leetcode.com/problems/linked-list-cycle/
