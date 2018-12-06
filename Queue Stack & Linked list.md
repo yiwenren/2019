@@ -186,3 +186,36 @@ public class Solution {
     }
 }
 ```
+### merge two lists
+有一点和merge array不一样的是，到最后直接判断l1,l2那个不是空List就加到主list的后面，不需要再while循环一个个加了
+```java
+public class Solution {
+    /**
+     * @param l1: ListNode l1 is the head of the linked list
+     * @param l2: ListNode l2 is the head of the linked list
+     * @return: ListNode head of linked list
+     */
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        // write your code here
+        ListNode dummyNode = new ListNode(-1);
+         ListNode cur = dummyNode;
+        while (l1 != null && l2 != null) {
+          if (l1.val < l2.val) {
+             cur.next = l1;
+            l1 = l1.next;
+          } else {
+            cur.next = l2;
+            l2 = l2.next;
+          }
+         
+          cur = cur.next;
+        }
+        if (l1 != null) {
+          cur.next = l1; 
+        } else {
+          cur.next = l2;
+        }
+        return dummyNode.next;
+        }
+}
+```
