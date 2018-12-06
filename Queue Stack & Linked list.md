@@ -187,7 +187,7 @@ public class Solution {
 }
 ```
 ### merge two lists
-有一点和merge array不一样的是，到最后直接判断l1,l2那个不是空List就加到主list的后面，不需要再while循环一个个加了
+有一点和merge array不一样的是，到最后直接判断l1,l2那个不是空List就加到主list的后面，不需要再while循环一个个加了，所以只需要一个if就可以
 ```java
 public class Solution {
     /**
